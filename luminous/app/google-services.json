@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "883250525158",
+    "project_id": "location-311313",
+    "storage_bucket": "location-311313.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883250525158:android:a082a0779e84a0afe99c27",
+        "android_client_info": {
+          "package_name": "umn.ac.id.luminous"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByU3YLbiVza1SkgbSGnby58zg5pSfF488"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

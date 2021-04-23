@@ -1,4 +1,9 @@
+umn/ac/id/luminous/SignInActivity.java
+ umn.ac.id.luminous.SignInActivity
 umn/ac/id/luminous/BuildConfig.java
  umn.ac.id.luminous.BuildConfig
+umn/ac/id/luminous/SignUpActivity.java
+ umn.ac.id.luminous.SignUpActivity
+ umn.ac.id.luminous.SignUpActivity$1
 umn/ac/id/luminous/MainActivity.java
  umn.ac.id.luminous.MainActivity
