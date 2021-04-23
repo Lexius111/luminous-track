@@ -1,0 +1,4 @@
+umn/ac/id/luminous/BuildConfig.java
+ umn.ac.id.luminous.BuildConfig
+umn/ac/id/luminous/MainActivity.java
+ umn.ac.id.luminous.MainActivity
