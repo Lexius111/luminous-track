@@ -1,6 +1,7 @@
 package umn.ac.id.luminous;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,6 +25,8 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         emailText = (EditText) findViewById(R.id.email);
         passText = (EditText) findViewById(R.id.password);
         mAuth = FirebaseAuth.getInstance();

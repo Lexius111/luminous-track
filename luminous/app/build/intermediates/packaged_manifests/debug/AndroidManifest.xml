@@ -27,12 +27,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
+        android:theme="@style/Theme.Luminous" >
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBdtJ4aqwPWq5os8KXz9QLvbKDKnktcxF8" />
 
         <activity android:name="umn.ac.id.luminous.HomeActivity" />
+        <activity android:name="umn.ac.id.luminous.MapActivity" />
         <activity android:name="umn.ac.id.luminous.SignUpActivity" />
         <activity android:name="umn.ac.id.luminous.SignInActivity" >
             <intent-filter>
