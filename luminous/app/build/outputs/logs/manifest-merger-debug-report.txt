@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\cbf08dde3da20d56d9ed7b206137cd9a\material-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\006b46906b2f770011761845d9282045\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\e7700bf3fcf4236768ca476b82b72080\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -53,25 +53,25 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\win_10_EC\.gr
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\f7e4217367496a423c08b58cd7a649f8\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\a16ef9f377ada6515a2739603d983dff\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\8275c6f89d23e4cfe8d5dd5efa714638\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
 		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml
-		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
 		INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml
-		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:1-23:12
 		INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:5:5-21:19
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\cbf08dde3da20d56d9ed7b206137cd9a\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\cbf08dde3da20d56d9ed7b206137cd9a\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\006b46906b2f770011761845d9282045\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -110,24 +110,28 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\wi
 		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:11:9-74
+activity#umn.ac.id.luminous.HomeActivity
+ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:12:9-59
+	android:name
+		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:12:19-47
 activity#umn.ac.id.luminous.SignUpActivity
-ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:12:9-61
+ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:13:9-61
 	android:name
-		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:12:19-49
-activity#umn.ac.id.luminous.MainActivity
-ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:13:9-19:20
+		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:13:19-49
+activity#umn.ac.id.luminous.SignInActivity
+ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:13:19-47
+		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:14:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:18:27-74
 uses-sdk
 INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml

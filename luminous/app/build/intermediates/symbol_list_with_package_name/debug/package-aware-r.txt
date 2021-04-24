@@ -1900,11 +1900,10 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
-id editTextTextEmailAddress
-id editTextTextPassword
 id editTextTextPersonName
 id edit_query
 id elastic
+id email
 id email_sign_up_form
 id end
 id endToStart
@@ -2039,6 +2038,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
 id password_error
 id password_toggle
 id path
@@ -2236,7 +2236,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_main
+layout activity_home
+layout activity_sign_in
 layout activity_sign_up
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
