@@ -1891,7 +1891,6 @@ id coordinator
 id cos
 id counterclockwise
 id create_account
-id create_new
 id custom
 id customPanel
 id cut
@@ -1993,6 +1992,7 @@ id line3
 id linear
 id listMode
 id list_item
+id logout
 id masked
 id material_clock_display
 id material_clock_face
@@ -2058,7 +2058,6 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
-id open
 id outline
 id outward
 id packed
