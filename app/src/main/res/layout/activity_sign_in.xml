@@ -34,12 +34,10 @@
                 app:srcCompat="@mipmap/loginlogo_foreground" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/editTextTextPersonName"
                 android:layout_width="194dp"
                 android:layout_height="97dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
-                android:ems="10"
                 android:text="Luminous Tracker"
                 android:textAlignment="center"
                 android:textColor="@color/white"

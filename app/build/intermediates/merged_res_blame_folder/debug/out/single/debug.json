@@ -76,6 +76,10 @@
         "source": "F:\\Darsen\\Kuliah\\AndroidStudioProject\\luminous\\app\\src\\main\\res\\mipmap-mdpi\\loginlogo_round.png"
     },
     {
+        "merged": "F:\\Darsen\\Kuliah\\AndroidStudioProject\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
+        "source": "F:\\Darsen\\Kuliah\\AndroidStudioProject\\luminous\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
         "merged": "F:\\Darsen\\Kuliah\\AndroidStudioProject\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_loginlogo.png.flat",
         "source": "F:\\Darsen\\Kuliah\\AndroidStudioProject\\luminous\\app\\src\\main\\res\\mipmap-hdpi\\loginlogo.png"
     },
