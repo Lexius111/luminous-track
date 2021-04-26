@@ -9,40 +9,39 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DetilActivity extends AppCompatActivity {
-    private EditText etNim, etNama, etEmail, etNomorHP;
+    private EditText etNama, etLokasi, etDeskripsi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detil);
-        etNim = findViewById(R.id.etNim2);
-        etNama = findViewById(R.id.etNama3);
-        etEmail = findViewById(R.id.etEmail1);
-        etNomorHP = findViewById(R.id.etNomorHp1);
+        etNama = findViewById(R.id.etNama);
+        etLokasi = findViewById(R.id.etLokasi);
+        etDeskripsi = findViewById(R.id.etDeskripsi);
+
         Intent intent = getIntent();
         if(intent.hasExtra("MAHASISWA")) {
-            Mahasiswa mhs = (Mahasiswa)
+            Favorites mhs = (Favorites)
                     intent.getSerializableExtra("MAHASISWA");
-            etNim.setText(mhs.getNim());
             etNama.setText(mhs.getNama());
-            etEmail.setText(mhs.getEmail());
-            etNomorHP.setText(mhs.getNomorhp());
-            etNim.setEnabled(false);
+            etLokasi.setText(mhs.getLokasi());
+            etDeskripsi.setText(mhs.getDeskripsi());
         } else {
-            etNim.setEnabled(true);
+
         }
     }
+
     public void simpanData(View view){
-        String mNIM = etNim.getText().toString();
         String mNama = etNama.getText().toString();
-        String mEmail = etEmail.getText().toString();
-        String mNoHp = etNomorHP.getText().toString();
-        if(mNIM.length() <= 0 || mNama.length() <= 0 ||
-                mEmail.length() <= 0 || mNoHp.length() <= 0){
+        String mLokasi = etLokasi.getText().toString();
+        String mDeskripsi = etDeskripsi.getText().toString();
+
+        if(mLokasi.length() <= 0 || mLokasi.length() <= 0 ||
+                mDeskripsi.length() <= 0 ){
             Toast.makeText(this,"Semua harus Diisi",
                     Toast.LENGTH_LONG).show();
         } else {
             Intent intentJawab = new Intent();
-            Mahasiswa mhs = new Mahasiswa(mNIM, mNama, mEmail, mNoHp);
+            Favorites mhs = new Favorites(mNama, mLokasi, mDeskripsi);
             intentJawab.putExtra("MAHASISWA",mhs);
             setResult(RESULT_OK,intentJawab);
             finish();

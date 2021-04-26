@@ -1,8 +1,6 @@
 umn/ac/id/luminous/MapActivity.java
  umn.ac.id.luminous.MapActivity
  umn.ac.id.luminous.MapActivity$1
-umn/ac/id/luminous/Mahasiswa.java
- umn.ac.id.luminous.Mahasiswa
 umn/ac/id/luminous/MahasiswaRoomDatabase.java
  umn.ac.id.luminous.MahasiswaRoomDatabase
  umn.ac.id.luminous.MahasiswaRoomDatabase$1
@@ -16,6 +14,8 @@ umn/ac/id/luminous/FirstFragment.java
  umn.ac.id.luminous.FirstFragment$1
 umn/ac/id/luminous/BuildConfig.java
  umn.ac.id.luminous.BuildConfig
+umn/ac/id/luminous/Favorites.java
+ umn.ac.id.luminous.Favorites
 umn/ac/id/luminous/MahasiswaViewModel.java
  umn.ac.id.luminous.MahasiswaViewModel
 umn/ac/id/luminous/FavoriteActivity.java

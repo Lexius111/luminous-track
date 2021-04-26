@@ -12,18 +12,18 @@ import java.util.List;
 
 @Dao
 public interface MahasiswaDAO {
-    @Query("SELECT * FROM tblMahasiswa")
-    LiveData<List<Mahasiswa>> getAllMahasiswa();
+    @Query("SELECT * FROM tblFavorites")
+    LiveData<List<Favorites>> getAllMahasiswa();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Mahasiswa mhs);
+    void insert(Favorites mhs);
 
     @Delete
-    void delete(Mahasiswa mhs);
+    void delete(Favorites mhs);
 
     @Update
-    void update(Mahasiswa mhs);
+    void update(Favorites mhs);
 
-    @Query("DELETE FROM tblMahasiswa")
+    @Query("DELETE FROM tblFavorites")
     void deleteAll();
 }

@@ -1,10 +1,12 @@
 package umn.ac.id.luminous;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,52 +15,59 @@ import java.util.List;
 
 public class MahasiswaListAdapter extends RecyclerView.Adapter<MahasiswaListAdapter.MahasiswaViewHolder> {
     private final LayoutInflater mInflater;
-    private List<Mahasiswa> daftarMahasiswa;
+    private List<Favorites> daftarFavorites;
     MahasiswaListAdapter(Context context){
         mInflater = LayoutInflater.from(context);
     }
+
+
     @NonNull
     @Override
-    public MahasiswaViewHolder onCreateViewHolder(@NonNull
-                                                          ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.msh_item_layout,
-                parent,false);
+    public MahasiswaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = mInflater.inflate(R.layout.msh_item_layout, parent,false);
         return new MahasiswaViewHolder(itemView);
     }
+
     @Override
-    public void onBindViewHolder(@NonNull MahasiswaViewHolder holder,
-                                 int position) {
-        if(daftarMahasiswa != null){
-            Mahasiswa mhs = daftarMahasiswa.get(position);
-            holder.tvNim.setText(mhs.getNim());
-            holder.tvNama.setText(mhs.getNama());
+    public void onBindViewHolder(@NonNull MahasiswaViewHolder holder, int position) {
+        if(daftarFavorites != null){
+            Favorites mhs = daftarFavorites.get(position);
+            holder.tvNama.setText("Nama: " + mhs.getNama());
+            holder.tvLokasi.setText("Lokasi: " + mhs.getLokasi());
+            holder.tvDeskripsi.setText("Deskripsi: "+ mhs.getDeskripsi());
         } else {
-            holder.tvNim.setText("Belum ada Mahasiswa");
+
         }
     }
     @Override
     public int getItemCount() {
-        if(daftarMahasiswa != null){
-            return daftarMahasiswa.size();
+        if(daftarFavorites != null){
+            return daftarFavorites.size();
         } else {
             return 0;
         }
     }
-    public Mahasiswa getMahasiswaAtPosition(int posisi){
-        return daftarMahasiswa.get(posisi);
+    public Favorites getMahasiswaAtPosition(int posisi){
+        return daftarFavorites.get(posisi);
     }
-    void setDaftarMahasiswa(List<Mahasiswa> mhss){
-        daftarMahasiswa = mhss;
+    void setDaftarFavorites(List<Favorites> mhs){
+        daftarFavorites = mhs;
         notifyDataSetChanged();
     }
 
     class MahasiswaViewHolder extends RecyclerView.ViewHolder{
-        private final TextView tvNim;
         private final TextView tvNama;
+        private final TextView tvLokasi;
+        private final TextView tvDeskripsi;
         public MahasiswaViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvNim = itemView.findViewById(R.id.tvItemNim);
             tvNama = itemView.findViewById(R.id.tvItemNama);
+            tvLokasi = itemView.findViewById(R.id.tvItemLokasi);
+            tvDeskripsi = itemView.findViewById(R.id.tvItemDeskripsi);
+
         }
     }
+
+
+
 }

@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Luminous">
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".SignInActivity"
             android:label="@string/title_activity_favorite"
             android:theme="@style/Theme.Luminous.NoActionBar"></activity>
 
@@ -25,7 +25,7 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".SignInActivity">
+        <activity android:name=".FavoriteActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

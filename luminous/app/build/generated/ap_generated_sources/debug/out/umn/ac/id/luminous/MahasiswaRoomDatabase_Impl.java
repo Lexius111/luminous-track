@@ -28,14 +28,14 @@ public final class MahasiswaRoomDatabase_Impl extends MahasiswaRoomDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `tblMahasiswa` (`nim` TEXT NOT NULL, `nama` TEXT, `email` TEXT, `nomorhp` TEXT, PRIMARY KEY(`nim`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `tblFavorites` (`nama` TEXT NOT NULL, `lokasi` TEXT, `deskripsi` TEXT, PRIMARY KEY(`nama`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"5ea190ffcbfd35bab99a04fb52ac9ccd\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"ca2a4356204a91c3f6d468019883594c\")");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("DROP TABLE IF EXISTS `tblMahasiswa`");
+        _db.execSQL("DROP TABLE IF EXISTS `tblFavorites`");
       }
 
       @Override
@@ -60,22 +60,21 @@ public final class MahasiswaRoomDatabase_Impl extends MahasiswaRoomDatabase {
 
       @Override
       protected void validateMigration(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsTblMahasiswa = new HashMap<String, TableInfo.Column>(4);
-        _columnsTblMahasiswa.put("nim", new TableInfo.Column("nim", "TEXT", true, 1));
-        _columnsTblMahasiswa.put("nama", new TableInfo.Column("nama", "TEXT", false, 0));
-        _columnsTblMahasiswa.put("email", new TableInfo.Column("email", "TEXT", false, 0));
-        _columnsTblMahasiswa.put("nomorhp", new TableInfo.Column("nomorhp", "TEXT", false, 0));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysTblMahasiswa = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesTblMahasiswa = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoTblMahasiswa = new TableInfo("tblMahasiswa", _columnsTblMahasiswa, _foreignKeysTblMahasiswa, _indicesTblMahasiswa);
-        final TableInfo _existingTblMahasiswa = TableInfo.read(_db, "tblMahasiswa");
-        if (! _infoTblMahasiswa.equals(_existingTblMahasiswa)) {
-          throw new IllegalStateException("Migration didn't properly handle tblMahasiswa(umn.ac.id.luminous.Mahasiswa).\n"
-                  + " Expected:\n" + _infoTblMahasiswa + "\n"
-                  + " Found:\n" + _existingTblMahasiswa);
+        final HashMap<String, TableInfo.Column> _columnsTblFavorites = new HashMap<String, TableInfo.Column>(3);
+        _columnsTblFavorites.put("nama", new TableInfo.Column("nama", "TEXT", true, 1));
+        _columnsTblFavorites.put("lokasi", new TableInfo.Column("lokasi", "TEXT", false, 0));
+        _columnsTblFavorites.put("deskripsi", new TableInfo.Column("deskripsi", "TEXT", false, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysTblFavorites = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesTblFavorites = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoTblFavorites = new TableInfo("tblFavorites", _columnsTblFavorites, _foreignKeysTblFavorites, _indicesTblFavorites);
+        final TableInfo _existingTblFavorites = TableInfo.read(_db, "tblFavorites");
+        if (! _infoTblFavorites.equals(_existingTblFavorites)) {
+          throw new IllegalStateException("Migration didn't properly handle tblFavorites(umn.ac.id.luminous.Favorites).\n"
+                  + " Expected:\n" + _infoTblFavorites + "\n"
+                  + " Found:\n" + _existingTblFavorites);
         }
       }
-    }, "5ea190ffcbfd35bab99a04fb52ac9ccd", "26be727435a3756565609e9b5551577d");
+    }, "ca2a4356204a91c3f6d468019883594c", "f1e0d7800540cad89438399771510371");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -86,7 +85,7 @@ public final class MahasiswaRoomDatabase_Impl extends MahasiswaRoomDatabase {
 
   @Override
   protected InvalidationTracker createInvalidationTracker() {
-    return new InvalidationTracker(this, "tblMahasiswa");
+    return new InvalidationTracker(this, "tblFavorites");
   }
 
   @Override
@@ -95,7 +94,7 @@ public final class MahasiswaRoomDatabase_Impl extends MahasiswaRoomDatabase {
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
     try {
       super.beginTransaction();
-      _db.execSQL("DELETE FROM `tblMahasiswa`");
+      _db.execSQL("DELETE FROM `tblFavorites`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

@@ -29,7 +29,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Luminous" >
         <activity
-            android:name="umn.ac.id.luminous.FavoriteActivity"
+            android:name="umn.ac.id.luminous.SignInActivity"
             android:label="@string/title_activity_favorite"
             android:theme="@style/Theme.Luminous.NoActionBar" />
 
@@ -41,7 +41,7 @@
         <activity android:name="umn.ac.id.luminous.HomeActivity" />
         <activity android:name="umn.ac.id.luminous.MapActivity" />
         <activity android:name="umn.ac.id.luminous.SignUpActivity" />
-        <activity android:name="umn.ac.id.luminous.SignInActivity" >
+        <activity android:name="umn.ac.id.luminous.FavoriteActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

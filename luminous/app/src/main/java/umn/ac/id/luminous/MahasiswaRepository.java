@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MahasiswaRepository {
     private MahasiswaDAO daoMahasiswa;
-    private LiveData<List<Mahasiswa>> daftarMahasiswa;
+    private LiveData<List<Favorites>> daftarMahasiswa;
 
     MahasiswaRepository(Application app){
         MahasiswaRoomDatabase db =
@@ -17,30 +17,30 @@ public class MahasiswaRepository {
         daoMahasiswa = db.daoMahasiswa();
         daftarMahasiswa = daoMahasiswa.getAllMahasiswa();
     }
-    LiveData<List<Mahasiswa>> getDaftarMahasiswa(){
+    LiveData<List<Favorites>> getDaftarMahasiswa(){
         return this.daftarMahasiswa;
     }
-    public void insert(Mahasiswa mhs){
+    public void insert(Favorites mhs){
         new insertAsyncTask(daoMahasiswa).execute(mhs);
     }
     public void deleteAll(){
         new deleteAllAsyncTask(daoMahasiswa).execute();
     }
-    public void delete(Mahasiswa mhs) {
+    public void delete(Favorites mhs) {
         new deleteAsyncTask(daoMahasiswa).execute(mhs);
     }
-    public void update(Mahasiswa mhs) {
+    public void update(Favorites mhs) {
         new updateAsyncTask(daoMahasiswa).execute(mhs);
     }
     private static class insertAsyncTask extends
-            AsyncTask<Mahasiswa, Void, Void> {
+            AsyncTask<Favorites, Void, Void> {
         private MahasiswaDAO asyncDaoMahasiswa;
         insertAsyncTask(MahasiswaDAO dao){
             this.asyncDaoMahasiswa = dao;
         }
         @Override
-        protected Void doInBackground(final Mahasiswa... mahasiswa) {
-            asyncDaoMahasiswa.insert(mahasiswa[0]);
+        protected Void doInBackground(final Favorites... favorites) {
+            asyncDaoMahasiswa.insert(favorites[0]);
             return null;
         }
     }
@@ -57,26 +57,26 @@ public class MahasiswaRepository {
         }
     }
     private static class deleteAsyncTask extends
-            AsyncTask<Mahasiswa, Void, Void>{
+            AsyncTask<Favorites, Void, Void>{
         private MahasiswaDAO asyncDaoMahasiswa;
         deleteAsyncTask(MahasiswaDAO dao){
             this.asyncDaoMahasiswa = dao;
         }
         @Override
-        protected Void doInBackground(final Mahasiswa... mahasiswas) {
-            asyncDaoMahasiswa.delete(mahasiswas[0]);
+        protected Void doInBackground(final Favorites... favorites) {
+            asyncDaoMahasiswa.delete(favorites[0]);
             return null;
         }
     }
     private static class updateAsyncTask extends
-            AsyncTask<Mahasiswa, Void, Void> {
+            AsyncTask<Favorites, Void, Void> {
         private MahasiswaDAO asyncDaoMahasiswa;
         updateAsyncTask(MahasiswaDAO dao){
             this.asyncDaoMahasiswa = dao;
         }
         @Override
-        protected Void doInBackground(final Mahasiswa... mahasiswas) {
-            asyncDaoMahasiswa.update(mahasiswas[0]);
+        protected Void doInBackground(final Favorites... favorites) {
+            asyncDaoMahasiswa.update(favorites[0]);
             return null;
         }
     }

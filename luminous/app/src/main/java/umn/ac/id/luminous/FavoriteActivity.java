@@ -4,19 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -32,15 +28,14 @@ public class FavoriteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_favorite);
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addIntent = new Intent(FavoriteActivity.this,
-                        DetilActivity.class);
+                Intent addIntent = new Intent(FavoriteActivity.this, DetilActivity.class);
                 startActivityForResult(addIntent,REQUEST_TAMBAH);
             }
         });
@@ -50,15 +45,13 @@ public class FavoriteActivity extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(this));
         mhsVM = ViewModelProviders.of(this).get(MahasiswaViewModel.class);
         mhsVM.getDaftarMahasiswa().observe(this,
-                new Observer<List<Mahasiswa>>() {
+                new Observer<List<Favorites>>() {
                     @Override
-                    public void onChanged(List<Mahasiswa> mhss) {
-                        adapter.setDaftarMahasiswa(mhss);
+                    public void onChanged(List<Favorites> mhss) {
+                        adapter.setDaftarFavorites(mhss);
                     }
                 });
-        ItemTouchHelper helper = new ItemTouchHelper(
-                new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT |
-                        ItemTouchHelper.RIGHT) {
+        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
                     @Override
                     public boolean onMove(@NonNull RecyclerView recyclerView,
                                           @NonNull RecyclerView.ViewHolder viewHolder,
@@ -66,14 +59,12 @@ public class FavoriteActivity extends AppCompatActivity {
                         return false;
                     }
                     @Override
-                    public void onSwiped(@NonNull RecyclerView.ViewHolder
-                                                 viewHolder, int direction) {
+                    public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                         int posisi = viewHolder.getAdapterPosition();
-                        Mahasiswa mhs =
-                                adapter.getMahasiswaAtPosition(posisi);
+                        Favorites mhs = adapter.getMahasiswaAtPosition(posisi);
                         if(direction == ItemTouchHelper.LEFT){
                             Toast.makeText(FavoriteActivity.this,
-                                    "Mahasiswa dengan NIM = "+mhs.getNim()+
+                                    "Favorites dengan NIM = "+mhs.getNama()+
                                             " dihapus",Toast.LENGTH_LONG).show();
                             mhsVM.delete(mhs);
                         }
@@ -88,6 +79,9 @@ public class FavoriteActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
+
         helper.attachToRecyclerView(rv);
     }
     @Override
@@ -95,7 +89,7 @@ public class FavoriteActivity extends AppCompatActivity {
                                  Intent data){
         super.onActivityResult(reqCode, resultCode, data);
         if(resultCode == RESULT_OK){
-            Mahasiswa mhs = (Mahasiswa)
+            Favorites mhs = (Favorites)
                     data.getSerializableExtra("MAHASISWA");
             if(reqCode == REQUEST_TAMBAH ) {
                 mhsVM.insert(mhs);
@@ -106,18 +100,7 @@ public class FavoriteActivity extends AppCompatActivity {
         }
         rv.getAdapter().notifyDataSetChanged();
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            mhsVM.deleteAll();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
+
+
 }

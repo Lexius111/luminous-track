@@ -1869,7 +1869,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1979,15 +1978,15 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
-id etEmail1
-id etNama3
-id etNim2
-id etNomorHp1
+id etDeskripsi
+id etLokasi
+id etNama
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fab
 id fade
+id favorite
 id field_email
 id field_password
 id field_password_confirmation
@@ -2167,7 +2166,6 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
-id setting
 id shortcut
 id showCustom
 id showHome
@@ -2222,10 +2220,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
-id textView2
 id textView4
-id textView5
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2253,8 +2248,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvItemDeskripsi
+id tvItemLokasi
 id tvItemNama
-id tvItemNim
 id unchecked
 id uniform
 id unlabeled
@@ -2425,7 +2421,6 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-menu menu_main
 menu top_right_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

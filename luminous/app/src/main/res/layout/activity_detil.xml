@@ -6,50 +6,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DetilActivity">
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nim:" />
+
     <EditText
-        android:id="@+id/etNim2"
+        android:id="@+id/etNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nama Lengkap:" />
+        android:hint="Nama Lokasi"
+        android:inputType="text" />
+
     <EditText
-        android:id="@+id/etNama3"
+        android:id="@+id/etLokasi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alamat Email:" />
+        android:hint="Lokasi"
+        android:inputType="text" />
+
     <EditText
-        android:id="@+id/etEmail1"
+        android:id="@+id/etDeskripsi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nomor Hp:" />
-    <EditText
-        android:id="@+id/etNomorHp1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone" />
+        android:hint="Deskripsi"
+        android:inputType="text" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
