@@ -19,7 +19,6 @@ import android.widget.Toast;
 import java.util.List;
 
 public class FavoriteActivity extends AppCompatActivity {
-
     private RecyclerView rv;
     private MahasiswaViewModel mhsVM;
     private static final int REQUEST_TAMBAH = 1;
@@ -40,6 +39,7 @@ public class FavoriteActivity extends AppCompatActivity {
             }
         });
         rv = (RecyclerView) findViewById(R.id.rvMahasiswa);
+
         final MahasiswaListAdapter adapter = new MahasiswaListAdapter(this);
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(this));
@@ -53,30 +53,26 @@ public class FavoriteActivity extends AppCompatActivity {
                 });
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
                     @Override
-                    public boolean onMove(@NonNull RecyclerView recyclerView,
-                                          @NonNull RecyclerView.ViewHolder viewHolder,
-                                          @NonNull RecyclerView.ViewHolder target) {
+                    public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                         return false;
                     }
+
                     @Override
                     public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                         int posisi = viewHolder.getAdapterPosition();
                         Favorites mhs = adapter.getMahasiswaAtPosition(posisi);
-                        if(direction == ItemTouchHelper.LEFT){
+                        if(direction == ItemTouchHelper.RIGHT){
                             Toast.makeText(FavoriteActivity.this,
                                     "Favorites dengan NIM = "+mhs.getNama()+
                                             " dihapus",Toast.LENGTH_LONG).show();
                             mhsVM.delete(mhs);
                         }
-                        else if(direction == ItemTouchHelper.RIGHT) {
-                            Intent editIntet =
-                                    new Intent(FavoriteActivity.this,
-                                            DetilActivity.class);
-                            editIntet.putExtra("MAHASISWA", mhs);
-                            startActivityForResult(editIntet,
-                                    REQUEST_EDIT);
+                        else if(direction == ItemTouchHelper.LEFT) {
+                            Intent editIntet = new Intent(FavoriteActivity.this, DetilActivity.class);
+                            startActivityForResult(editIntet, REQUEST_EDIT);
                         }
                     }
+
                 }
         );
 

@@ -3,6 +3,7 @@ package umn.ac.id.luminous;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,8 +21,7 @@ public class DetilActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         if(intent.hasExtra("MAHASISWA")) {
-            Favorites mhs = (Favorites)
-                    intent.getSerializableExtra("MAHASISWA");
+            Favorites mhs = (Favorites) intent.getSerializableExtra("MAHASISWA");
             etNama.setText(mhs.getNama());
             etLokasi.setText(mhs.getLokasi());
             etDeskripsi.setText(mhs.getDeskripsi());
@@ -31,6 +31,7 @@ public class DetilActivity extends AppCompatActivity {
     }
 
     public void simpanData(View view){
+
         String mNama = etNama.getText().toString();
         String mLokasi = etLokasi.getText().toString();
         String mDeskripsi = etDeskripsi.getText().toString();

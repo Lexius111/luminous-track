@@ -31,7 +31,7 @@
 18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\win_10_EC\.gradle\caches\transforms-2\files-2.1\d9a7a5ade5772b5f380a98b30bbdc236\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 19
 20    <application
-20-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:9:5-35:19
+20-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:9:5-37:19
 21        android:allowBackup="true"
 21-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:10:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -49,46 +49,46 @@
 29        android:testOnly="true"
 30        android:theme="@style/Theme.Luminous" >
 30-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:15:9-46
-31        <activity
-31-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:16:9-19:74
-32            android:name="umn.ac.id.luminous.SignInActivity"
-32-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:17:13-43
-33            android:label="@string/title_activity_favorite"
-33-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:18:13-60
-34            android:theme="@style/Theme.Luminous.NoActionBar" />
-34-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:19:13-62
-35
-36        <meta-data
-36-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:21:9-23:71
-37            android:name="com.google.android.geo.API_KEY"
-37-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:22:13-58
-38            android:value="AIzaSyBdtJ4aqwPWq5os8KXz9QLvbKDKnktcxF8" />
-38-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:23:13-68
-39
-40        <activity android:name="umn.ac.id.luminous.DetilActivity" />
-40-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:24:9-51
-40-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:24:19-48
+31        <meta-data
+31-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:18:9-20:71
+32            android:name="com.google.android.geo.API_KEY"
+32-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:19:13-58
+33            android:value="AIzaSyBdtJ4aqwPWq5os8KXz9QLvbKDKnktcxF8" />
+33-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:20:13-68
+34
+35        <activity
+35-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:21:9-23:50
+36            android:name="umn.ac.id.luminous.FavoriteActivity"
+36-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:22:13-45
+37            android:label="Favorites" />
+37-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:23:13-38
+38        <activity
+38-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:24:9-26:53
+39            android:name="umn.ac.id.luminous.DetilActivity"
+39-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:25:13-42
+40            android:label="Add Location" />
+40-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:26:13-41
 41        <activity android:name="umn.ac.id.luminous.HomeActivity" />
-41-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:25:9-50
-41-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:25:19-47
+41-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:27:9-50
+41-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:27:19-47
 42        <activity android:name="umn.ac.id.luminous.MapActivity" />
-42-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:26:9-49
-42-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:26:19-46
+42-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:28:9-49
+42-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:28:19-46
 43        <activity android:name="umn.ac.id.luminous.SignUpActivity" />
-43-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:27:9-52
-43-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:27:19-49
-44        <activity android:name="umn.ac.id.luminous.FavoriteActivity" >
-44-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:28:9-34:20
-44-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:28:19-51
+43-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:29:9-52
+43-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:29:19-49
+44        <activity android:name="umn.ac.id.luminous.SignInActivity" >
+44-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:30:9-36:20
+44-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:30:19-49
 45            <intent-filter>
-45-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:29:13-33:29
+45-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:31:13-35:29
 46                <action android:name="android.intent.action.MAIN" />
-46-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:30:17-69
-46-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:30:25-66
+46-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:32:17-69
+46-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:32:25-66
 47
 48                <category android:name="android.intent.category.LAUNCHER" />
-48-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:32:17-77
-48-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:32:27-74
+48-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:34:17-77
+48-->D:\Github\luminous-track\luminous\app\src\main\AndroidManifest.xml:34:27-74
 49            </intent-filter>
 50        </activity>
 51        <activity
