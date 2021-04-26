@@ -13,22 +13,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Luminous">
-
+        <activity
+            android:name=".FavoriteActivity"
+            android:label="@string/title_activity_favorite"
+            android:theme="@style/Theme.Luminous.NoActionBar"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBdtJ4aqwPWq5os8KXz9QLvbKDKnktcxF8" />
-
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".DetilActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

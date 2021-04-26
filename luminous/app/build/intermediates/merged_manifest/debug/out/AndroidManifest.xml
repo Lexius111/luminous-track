@@ -28,10 +28,16 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Luminous" >
+        <activity
+            android:name="umn.ac.id.luminous.FavoriteActivity"
+            android:label="@string/title_activity_favorite"
+            android:theme="@style/Theme.Luminous.NoActionBar" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBdtJ4aqwPWq5os8KXz9QLvbKDKnktcxF8" />
 
+        <activity android:name="umn.ac.id.luminous.DetilActivity" />
         <activity android:name="umn.ac.id.luminous.HomeActivity" />
         <activity android:name="umn.ac.id.luminous.MapActivity" />
         <activity android:name="umn.ac.id.luminous.SignUpActivity" />
@@ -126,6 +132,12 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="umn.ac.id.luminous.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>
