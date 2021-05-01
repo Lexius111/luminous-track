@@ -20,11 +20,11 @@ public class DetilActivity extends AppCompatActivity {
         etDeskripsi = findViewById(R.id.etDeskripsi);
 
         Intent intent = getIntent();
-        if(intent.hasExtra("MAHASISWA")) {
-            Favorites mhs = (Favorites) intent.getSerializableExtra("MAHASISWA");
-            etNama.setText(mhs.getNama());
-            etLokasi.setText(mhs.getLokasi());
-            etDeskripsi.setText(mhs.getDeskripsi());
+        if(intent.hasExtra("fAVORITES")) {
+            Favorites loc = (Favorites) intent.getSerializableExtra("FAVORITES");
+            etNama.setText(loc.getNama());
+            etLokasi.setText(loc.getLokasi());
+            etDeskripsi.setText(loc.getDeskripsi());
         } else {
 
         }
@@ -42,8 +42,8 @@ public class DetilActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         } else {
             Intent intentJawab = new Intent();
-            Favorites mhs = new Favorites(mNama, mLokasi, mDeskripsi);
-            intentJawab.putExtra("MAHASISWA",mhs);
+            Favorites loc = new Favorites(mNama, mLokasi, mDeskripsi);
+            intentJawab.putExtra("FAVORITES",loc);
             setResult(RESULT_OK,intentJawab);
             finish();
         }

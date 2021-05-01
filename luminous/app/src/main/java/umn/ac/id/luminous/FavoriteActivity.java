@@ -20,7 +20,7 @@ import java.util.List;
 
 public class FavoriteActivity extends AppCompatActivity {
     private RecyclerView rv;
-    private MahasiswaViewModel mhsVM;
+    private FavoriteViewModel favVM;
     private static final int REQUEST_TAMBAH = 1;
     private static final int REQUEST_EDIT = 2;
 
@@ -38,17 +38,17 @@ public class FavoriteActivity extends AppCompatActivity {
                 startActivityForResult(addIntent,REQUEST_TAMBAH);
             }
         });
-        rv = (RecyclerView) findViewById(R.id.rvMahasiswa);
+        rv = (RecyclerView) findViewById(R.id.rvFavorite);
 
-        final MahasiswaListAdapter adapter = new MahasiswaListAdapter(this);
+        final FavoriteListAdapter adapter = new FavoriteListAdapter(this);
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        mhsVM = ViewModelProviders.of(this).get(MahasiswaViewModel.class);
-        mhsVM.getDaftarMahasiswa().observe(this,
+        favVM = ViewModelProviders.of(this).get(FavoriteViewModel.class);
+        favVM.getDaftarFavorite().observe(this,
                 new Observer<List<Favorites>>() {
                     @Override
-                    public void onChanged(List<Favorites> mhss) {
-                        adapter.setDaftarFavorites(mhss);
+                    public void onChanged(List<Favorites> locs) {
+                        adapter.setDaftarFavorites(locs);
                     }
                 });
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
@@ -60,12 +60,12 @@ public class FavoriteActivity extends AppCompatActivity {
                     @Override
                     public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                         int posisi = viewHolder.getAdapterPosition();
-                        Favorites mhs = adapter.getMahasiswaAtPosition(posisi);
+                        Favorites loc = adapter.getFavoriteAtPosition(posisi);
                         if(direction == ItemTouchHelper.RIGHT){
                             Toast.makeText(FavoriteActivity.this,
-                                    "Favorites dengan NIM = "+mhs.getNama()+
+                                    "Favorites dengan nama = "+loc.getNama()+
                                             " dihapus",Toast.LENGTH_LONG).show();
-                            mhsVM.delete(mhs);
+                            favVM.delete(loc);
                         }
                         else if(direction == ItemTouchHelper.LEFT) {
                             Intent editIntet = new Intent(FavoriteActivity.this, DetilActivity.class);
@@ -85,13 +85,13 @@ public class FavoriteActivity extends AppCompatActivity {
                                  Intent data){
         super.onActivityResult(reqCode, resultCode, data);
         if(resultCode == RESULT_OK){
-            Favorites mhs = (Favorites)
-                    data.getSerializableExtra("MAHASISWA");
+            Favorites loc = (Favorites)
+                    data.getSerializableExtra("FAVORITES");
             if(reqCode == REQUEST_TAMBAH ) {
-                mhsVM.insert(mhs);
+                favVM.insert(loc);
             }
             else if (reqCode == REQUEST_EDIT) {
-                mhsVM.update(mhs);
+                favVM.update(loc);
             }
         }
         rv.getAdapter().notifyDataSetChanged();
