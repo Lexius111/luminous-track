@@ -1,7 +1,9 @@
 package umn.ac.id.luminous;
 
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetilActivity extends AppCompatActivity {
     private EditText etNama, etLokasi, etDeskripsi;
+    Location currentLocation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,13 +23,14 @@ public class DetilActivity extends AppCompatActivity {
         etDeskripsi = findViewById(R.id.etDeskripsi);
 
         Intent intent = getIntent();
-        if(intent.hasExtra("fAVORITES")) {
+        if(intent.hasExtra("FAVORITES")) {
             Favorites loc = (Favorites) intent.getSerializableExtra("FAVORITES");
             etNama.setText(loc.getNama());
             etLokasi.setText(loc.getLokasi());
             etDeskripsi.setText(loc.getDeskripsi());
-        } else {
-
+        } else if(intent.hasExtra("currentlocation")){
+            String apapun= intent.getStringExtra("currentlocation");
+            etLokasi.setText(apapun);
         }
     }
 
@@ -36,21 +40,19 @@ public class DetilActivity extends AppCompatActivity {
         String mLokasi = etLokasi.getText().toString();
         String mDeskripsi = etDeskripsi.getText().toString();
 
-        if(mLokasi.length() <= 0 || mLokasi.length() <= 0 ||
-                mDeskripsi.length() <= 0 ){
-            Toast.makeText(this,"Semua harus Diisi",
-                    Toast.LENGTH_LONG).show();
+        if(mLokasi.length() <= 0 || mLokasi.length() <= 0 || mDeskripsi.length() <= 0 ){
+            Toast.makeText(this,"Semua harus Diisi", Toast.LENGTH_LONG).show();
         } else {
             Intent intentJawab = new Intent();
             Favorites loc = new Favorites(mNama, mLokasi, mDeskripsi);
             intentJawab.putExtra("FAVORITES",loc);
-            setResult(RESULT_OK,intentJawab);
+            setResult(RESULT_OK, intentJawab);
             finish();
         }
     }
     public void batal(View view){
         Intent intentJawab = new Intent();
-        setResult(RESULT_CANCELED,intentJawab);
+        setResult(RESULT_CANCELED, intentJawab);
         finish();
     }
 }

@@ -30,22 +30,13 @@ public class FavoriteActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_favorite);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent addIntent = new Intent(FavoriteActivity.this, DetilActivity.class);
-                startActivityForResult(addIntent,REQUEST_TAMBAH);
-            }
-        });
         rv = (RecyclerView) findViewById(R.id.rvFavorite);
 
         final FavoriteListAdapter adapter = new FavoriteListAdapter(this);
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(this));
         favVM = ViewModelProviders.of(this).get(FavoriteViewModel.class);
-        favVM.getDaftarFavorite().observe(this,
-                new Observer<List<Favorites>>() {
+        favVM.getDaftarFavorite().observe(this, new Observer<List<Favorites>>() {
                     @Override
                     public void onChanged(List<Favorites> locs) {
                         adapter.setDaftarFavorites(locs);
@@ -62,13 +53,12 @@ public class FavoriteActivity extends AppCompatActivity {
                         int posisi = viewHolder.getAdapterPosition();
                         Favorites loc = adapter.getFavoriteAtPosition(posisi);
                         if(direction == ItemTouchHelper.RIGHT){
-                            Toast.makeText(FavoriteActivity.this,
-                                    "Favorites dengan nama = "+loc.getNama()+
-                                            " dihapus",Toast.LENGTH_LONG).show();
+                            Toast.makeText(FavoriteActivity.this, "Favorites dengan nama = "+loc.getNama()+ " dihapus",Toast.LENGTH_LONG).show();
                             favVM.delete(loc);
                         }
                         else if(direction == ItemTouchHelper.LEFT) {
                             Intent editIntet = new Intent(FavoriteActivity.this, DetilActivity.class);
+                            editIntet.putExtra("FAVORITES", loc);
                             startActivityForResult(editIntet, REQUEST_EDIT);
                         }
                     }
@@ -81,8 +71,7 @@ public class FavoriteActivity extends AppCompatActivity {
         helper.attachToRecyclerView(rv);
     }
     @Override
-    public void onActivityResult(int reqCode, int resultCode,
-                                 Intent data){
+    public void onActivityResult(int reqCode, int resultCode, Intent data){
         super.onActivityResult(reqCode, resultCode, data);
         if(resultCode == RESULT_OK){
             Favorites loc = (Favorites)

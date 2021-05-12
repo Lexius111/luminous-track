@@ -45,11 +45,6 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.favorite:
-                Intent intent2 = new Intent(HomeActivity.this, FavoriteActivity.class);
-                startActivity(intent2);
-                finish();
-                return true;
             case R.id.log_out:
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(HomeActivity.this, SignInActivity.class);
@@ -63,6 +58,11 @@ public class HomeActivity extends AppCompatActivity {
 
     public void Openmap(View view){
         Intent intent=new Intent(getApplicationContext(),MapActivity.class);
+        startActivity(intent);
+    }
+
+    public void Openfavorites(View view){
+        Intent intent = new Intent(HomeActivity.this, FavoriteActivity.class);
         startActivity(intent);
     }
 

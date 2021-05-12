@@ -4,6 +4,7 @@ umn/ac/id/luminous/FavoriteListAdapter.java
 umn/ac/id/luminous/MapActivity.java
  umn.ac.id.luminous.MapActivity
  umn.ac.id.luminous.MapActivity$1
+ umn.ac.id.luminous.MapActivity$2
 umn/ac/id/luminous/FavoriteViewModel.java
  umn.ac.id.luminous.FavoriteViewModel
 umn/ac/id/luminous/DetilActivity.java
@@ -11,9 +12,6 @@ umn/ac/id/luminous/DetilActivity.java
 umn/ac/id/luminous/SignInActivity.java
  umn.ac.id.luminous.SignInActivity
  umn.ac.id.luminous.SignInActivity$1
-umn/ac/id/luminous/FirstFragment.java
- umn.ac.id.luminous.FirstFragment
- umn.ac.id.luminous.FirstFragment$1
 umn/ac/id/luminous/BuildConfig.java
  umn.ac.id.luminous.BuildConfig
 umn/ac/id/luminous/Favorites.java
@@ -22,7 +20,6 @@ umn/ac/id/luminous/FavoriteActivity.java
  umn.ac.id.luminous.FavoriteActivity
  umn.ac.id.luminous.FavoriteActivity$1
  umn.ac.id.luminous.FavoriteActivity$2
- umn.ac.id.luminous.FavoriteActivity$3
 umn/ac/id/luminous/FavoriteDAO.java
  umn.ac.id.luminous.FavoriteDAO
 umn/ac/id/luminous/FavoriteRepository.java
@@ -39,6 +36,3 @@ umn/ac/id/luminous/SignUpActivity.java
 umn/ac/id/luminous/FavoriteRoomDatabase.java
  umn.ac.id.luminous.FavoriteRoomDatabase
  umn.ac.id.luminous.FavoriteRoomDatabase$1
-umn/ac/id/luminous/SecondFragment.java
- umn.ac.id.luminous.SecondFragment
- umn.ac.id.luminous.SecondFragment$1

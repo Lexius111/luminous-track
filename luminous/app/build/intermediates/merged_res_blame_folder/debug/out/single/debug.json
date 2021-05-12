@@ -28,12 +28,12 @@
         "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\layout\\msh_item_layout.xml"
     },
     {
-        "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_loginlogo_round.png.flat",
         "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-xxhdpi\\loginlogo_round.png"
+    },
+    {
+        "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
@@ -72,12 +72,12 @@
         "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-mdpi\\loginlogo_foreground.png"
     },
     {
-        "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_loginlogo.png.flat",
-        "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-xxxhdpi\\loginlogo.png"
-    },
-    {
         "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_loginlogo.png.flat",
         "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-xxhdpi\\loginlogo.png"
+    },
+    {
+        "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_loginlogo.png.flat",
+        "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-xxxhdpi\\loginlogo.png"
     },
     {
         "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_up.xml.flat",
@@ -108,16 +108,8 @@
         "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_second.xml.flat",
-        "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\layout\\fragment_second.xml"
-    },
-    {
         "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_loginlogo_round.png.flat",
         "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\mipmap-hdpi\\loginlogo_round.png"
-    },
-    {
-        "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_first.xml.flat",
-        "source": "D:\\Github\\luminous-track\\luminous\\app\\src\\main\\res\\layout\\fragment_first.xml"
     },
     {
         "merged": "D:\\Github\\luminous-track\\luminous\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_loginlogo.xml.flat",

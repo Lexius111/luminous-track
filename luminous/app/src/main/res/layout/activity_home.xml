@@ -48,9 +48,18 @@
                 android:textSize="36sp"
                 android:textStyle="bold"/>
 
+            <Button
+                android:id="@+id/button_my_favorites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:onClick="Openfavorites"
+                android:backgroundTint="@color/yellow"
+                android:layout_marginBottom="20dp"
+                android:text="My Favorites" />
 
             <Button
-                android:id="@+id/button_sign_in"
+                android:id="@+id/button_open_map"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
@@ -58,6 +67,8 @@
                 android:backgroundTint="@color/yellow"
                 android:layout_marginBottom="20dp"
                 android:text="Show My Location" />
+
+
 
         </LinearLayout>
     </ScrollView>
