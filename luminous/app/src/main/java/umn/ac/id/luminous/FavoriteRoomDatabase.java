@@ -8,7 +8,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Favorites.class}, version = 1, exportSchema = false)
+@Database(entities = {Favorites.class}, version = 2, exportSchema = false)
 public abstract class FavoriteRoomDatabase extends RoomDatabase {
     public abstract FavoriteDAO daoFavorite();
 

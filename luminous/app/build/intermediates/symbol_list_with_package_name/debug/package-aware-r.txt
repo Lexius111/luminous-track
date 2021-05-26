@@ -2826,6 +2826,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu top_right_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 mipmap loginlogo
 mipmap loginlogo_foreground

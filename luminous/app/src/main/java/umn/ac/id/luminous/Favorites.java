@@ -9,10 +9,10 @@ import java.io.Serializable;
 
 @Entity(tableName = "tblFavorites")
 public class Favorites implements Serializable {
-    @ColumnInfo(name = "nama")
-    private String nama;
     @PrimaryKey
     @NonNull
+    @ColumnInfo(name = "nama")
+    private String nama;
     @ColumnInfo(name = "lokasi")
     private String lokasi;
     @ColumnInfo(name = "deskripsi")

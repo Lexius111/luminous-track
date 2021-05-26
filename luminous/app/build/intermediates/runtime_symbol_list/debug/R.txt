@@ -2825,10 +2825,11 @@ int layout text_view_with_theme_line_height 0x7f0b007e
 int layout text_view_without_line_height 0x7f0b007f
 int menu top_right_menu 0x7f0c0000
 int mipmap ic_launcher 0x7f0d0000
-int mipmap ic_launcher_round 0x7f0d0001
-int mipmap loginlogo 0x7f0d0002
-int mipmap loginlogo_foreground 0x7f0d0003
-int mipmap loginlogo_round 0x7f0d0004
+int mipmap ic_launcher_foreground 0x7f0d0001
+int mipmap ic_launcher_round 0x7f0d0002
+int mipmap loginlogo 0x7f0d0003
+int mipmap loginlogo_foreground 0x7f0d0004
+int mipmap loginlogo_round 0x7f0d0005
 int navigation nav_graph 0x7f0e0000
 int plurals mtrl_badge_content_description 0x7f0f0000
 int raw places_keep 0x7f100000

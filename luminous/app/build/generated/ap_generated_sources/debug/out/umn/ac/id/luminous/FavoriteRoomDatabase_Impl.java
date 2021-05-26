@@ -25,7 +25,7 @@ public final class FavoriteRoomDatabase_Impl extends FavoriteRoomDatabase {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `tblFavorites` (`nama` TEXT NOT NULL, `lokasi` TEXT, `deskripsi` TEXT, PRIMARY KEY(`nama`))");
